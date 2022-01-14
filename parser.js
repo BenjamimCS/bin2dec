@@ -50,13 +50,7 @@ function bin2Dec(){
         resultSpan.style.marginTop = '0';
         resultSpan.style.opacity = '1';
 
-    }    
-    
-    toLog(
-        binString.value,
-        binArr,validator(binArr),
-        resultSpan.textContent
-    );
+    }
 
     let interval = setInterval(function (){
         alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;
