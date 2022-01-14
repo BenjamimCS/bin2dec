@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert any binary to Decimal">
+    <title>Binary2Dec</title>
+    <link rel="shortcut icon" href="./imgs/bin2dec.png" type="image/x-icon">
+    <link rel="stylesheet" href="./stylez/stylez.css">
+</head>
+<body>
+    <header>
+        <h1>Bin2Dec</h1>
+        <h2>Your Favorite Converter</h2>
+    </header>
+    <main>
+        <section id="alertBox">
+            <div id="alertBox-area">
+                <div id="alertBox-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="warnLOGO" data-name="Camada 1" viewBox="0 0 486 486">
+                    	<defs>
+                    		<style>
+                    			.cls-1{fill:#ed1c24;}.cls-2{fill:#f5f5f5;}
+                    		</style>
+                    	</defs>
+                    	<g id="Camada_5" data-name="Camada 5"><circle class="cls-1" cx="243" cy="243" r="243"/><circle class="cls-2" cx="243" cy="399" r="39"/>
+                    	</g>
+                    	<path class="cls-2" d="M302.61,106.93A28.1,28.1,0,0,0,274.54,77.5H235.46a28.1,28.1,0,0,0-28.07,29.43l9.49,200.65a28.26,28.26,0,0,0,28.23,26.92h19.78a28.26,28.26,0,0,0,28.23-26.92Z" transform="translate(-12 -12)"/>
+                    </svg>
+                </div>
+                <div id="alertBox-text">
+                    Empty or Non-Binary Value
+                </div>
+            </div>
+        </section>
+        <section id="parser-area">
+            <div id="area">                
+                <input type="number" id="binInput" min="0" max="1" placeholder="Put Your Binary Number Here" autofocus>
+                <br>
+                <input type="button" value="To Parse" id="toParseBtn"><input type="button" id="cleanBtn" value="Clear">
+                
+                <div id="result">
+                    <span id="result-span"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="parser.js" defer></script>
+    <script src="logger.js" defer></script>
+</body>
+</html>

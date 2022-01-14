@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family:  Helvetica, Arial, sans-serif;
+    color: whitesmoke;
+}
+
+body{
+    background-color: #0f0f0f;
+}
+
+header{
+    margin-top: 15px;
+
+    text-align: center;
+    color: whitesmoke;
+}
+
+#alertBox{
+    position: absolute;
+    height: 45px;
+    top: 130px;
+    right: 0px;
+    
+    font-weight: bold;
+
+    overflow: hidden;
+}
+
+#alertBox,
+#alertBox-img,
+#alertBox-text{
+    box-sizing: border-box;
+    height: 45px;
+}
+
+#alertBox-area{
+    display: flex;
+
+    margin-right: -290px;
+
+    transition: margin-right .5s ease-in-out;
+}
+
+#alertBox-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #383838;
+}
+
+#alertBox-img > svg{
+    padding: 0px 15px;
+
+    height: 25px;
+}
+
+#alertBox-text{
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+
+    background-color: #494949;
+}
+
+#parser-area{
+    margin-top: 150px;
+    
+    color: whitesmoke;
+}
+
+#parser-area::before{
+    display: none;
+
+    content: 'Empty or Non Binary';
+
+    text-align: center;
+}
+
+#area{
+    max-width: 264px;
+    margin: auto;    
+    padding: 0px 5px;
+
+    text-align: center;
+}
+
+input{
+    box-sizing: border-box;
+    -moz-appearance: textfield;
+    
+    height: 60px;
+    margin-top: 5px;
+    padding: 5px 5px;    
+    
+    font-weight: bold;
+    font-size: 1em;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#binInput{
+    margin-bottom: 5px;
+    width: 100%;
+
+    text-align: center;
+    font-size: 1.5em;
+    color: whitesmoke;
+    border: 2px solid #d1d1d1;
+    background-color: transparent;
+}
+
+#binInput::placeholder{
+    font-size: 0.7em;
+    color: #929292;
+}
+
+#binInput::-webkit-inner-spin-button,
+#binInput::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#toParseBtn{
+    width: 48%;
+    height: 50px;
+
+    color: black;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #eeeeee, rgba(0, 0, 0, 0.274));
+
+    transition: background-color .1s ease;
+}
+
+#toParseBtn:hover{
+    background-color: #d1d1d1;
+}
+
+#toParseBtn:active{
+    background-color: #b1b1b1;
+}
+
+#cleanBtn{
+    height: 50px;
+    width: 48%;
+    margin-left: 10px;
+
+    color: black;
+
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #eeeeee, rgba(0, 0, 0, 0.274));
+}
+
+#cleanBtn:hover{
+    background-color: #d1d1d1;
+}
+
+#cleanBtn:active{
+    background-color: #b1b1b1;
+}
+
+#result{
+    padding-top: 15px;
+
+    font-size: 2em;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+#result-span{
+    display: block;
+    opacity: 0;
+    margin-top: -45px;
+    transition: .3s ease;
+}
