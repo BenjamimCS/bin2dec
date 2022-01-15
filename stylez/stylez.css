@@ -248,7 +248,7 @@ input{
     fill: #cecece;
 }
 
-@media (max-width: 500px){
+@media (max-width: 800px){
     #footer-content-credit{
         margin: 0;
     }
