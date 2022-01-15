@@ -247,3 +247,9 @@ input{
 #footer-content-credit svg path{
     fill: #cecece;
 }
+
+@media (max-width: 500px){
+    #footer-content-credit{
+        margin: 0;
+    }
+}
