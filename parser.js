@@ -20,9 +20,11 @@ toParseBtn
 clearResult
     .addEventListener('click',toClear);
 
-var validator = (ar) => 
-                (ar.filter((a) => 
-                a === 1 || a === 0)).length === ar.length;
+const isBin = (ar) => 
+                ar.filter((a) => 
+                a === 1 || a === 0).length === ar.length;
+
+const alertBoxAnim = () => alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;            
 
 function bin2Dec(){    
     let binArr = Array.from(binString.value,(n) => Number(n));
@@ -30,15 +32,12 @@ function bin2Dec(){
     let exp = binArr.length;
     let acc = 0;
 
-    if(binString.value.length == 0 || !validator(binArr)){
+    if(binString.value.length === 0 || !isBin(binArr)){
         alertBoxTextArea.textContent = 'Empty or Non-Binary Value';
         alertBoxArea.style.marginRight = '0px';
 
-        let interval = setInterval(function (){
-            alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;
-            clearInterval(interval);
-        },1500);
-
+        setTimeout(alertBoxAnim,1500);
+        
         binString.focus();
     } else{
         
@@ -52,10 +51,7 @@ function bin2Dec(){
 
     }
 
-    let interval = setInterval(function (){
-        alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;
-        clearInterval(interval);
-    },1500);
+    setTimeout(alertBoxAnim,1500);
 
     binString.focus();
 }
@@ -63,12 +59,9 @@ function bin2Dec(){
 function toClear(){
     if(resultSpan.textContent === ''){
         alertBoxTextArea.textContent = 'Nothing To Clear';
-        alertBoxArea.style.marginRight = '0px';
+    alertBoxArea.style.marginRight = '0px';
 
-        let interval = setInterval(function (){
-            alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;
-            clearInterval(interval);
-        },1500);
+        setTimeout(alertBoxAnim,1500);
 
         binString.focus();
     } else{
@@ -78,10 +71,7 @@ function toClear(){
         resultSpan.style.marginTop = '';
         resultSpan.textContent = '';        
 
-        let interval = setInterval(function (){
-            alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;
-            clearInterval(interval);
-        },1500);
+        setTimeout(alertBoxAnim,1500);
         
         binString.focus();
     }
