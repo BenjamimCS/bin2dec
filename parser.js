@@ -29,8 +29,8 @@ const alertBoxAnim = () => alertBoxArea.style.marginRight = alertBoxStndrtMargin
 function bin2Dec(){    
     let binArr = Array.from(binString.value,(n) => Number(n));
 
-    let exp = binArr.length;
-    let acc = 0;
+    let expo = binArr.length;
+    let result = 0;
 
     if(binString.value.length === 0 || !isBin(binArr)){
         alertBoxTextArea.textContent = 'Empty or Non-Binary Value';
@@ -42,10 +42,10 @@ function bin2Dec(){
     } else{
         
         for (numbers of binArr){
-            acc += (2 ** --exp) * numbers;
+            result += (2 ** --expo) * numbers;
         }
 
-        resultSpan.innerHTML = acc;
+        resultSpan.innerHTML = result;
         resultSpan.style.marginTop = '0';
         resultSpan.style.opacity = '1';
 
