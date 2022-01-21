@@ -20,9 +20,9 @@ toParseBtn
 clearResult
     .addEventListener('click',toClear);
 
-const isBin = (ar) => 
-                ar.filter((a) => 
-                a === 1 || a === 0).length === ar.length;
+const isBin = ar => 
+              ar.filter(a => 
+              a === 1 || a === 0).length === ar.length;
 
 const alertBoxAnim = () => alertBoxArea.style.marginRight = alertBoxStndrtMarginRight;            
 
