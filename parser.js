@@ -1,4 +1,4 @@
-import {isBin,alertBoxAnim,showResult} from './utilities.js';
+import {isBin,alertBoxAnim,showResult,resetResult} from './utilities.js';
 
 const alertBoxArea = document.getElementById('alertBox-area');
 const alertBoxTextArea = document.getElementById('alertBox-text');
@@ -62,7 +62,7 @@ function toClear(){
     } else{
         binString.value = '';
 
-        showResult(resultSpan);
+        resetResult(resultSpan);
         resultSpan.textContent = '';
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
