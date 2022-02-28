@@ -12,7 +12,7 @@ const alertBoxStndrtMargin = '-290px';
 binString
     .addEventListener(
     'keydown',
-    (k) =>{                                
+    (k) =>{              
         if(k.keyCode === 13){
             bin2Dec();
         }
@@ -34,10 +34,10 @@ function bin2Dec(){
         alertBoxArea.style.marginRight = '0px';
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500)
-        
+
         binString.focus();
     } else{
-        
+
         for (let numbers of binArr){
             acc += (2 ** --expo) * numbers;
         }
@@ -45,7 +45,7 @@ function bin2Dec(){
         resultSpan.innerHTML = acc;
         showResult(resultSpan);
     }
-    
+
     alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
 
     binString.focus();
@@ -61,12 +61,12 @@ function toClear(){
         binString.focus();
     } else{
         binString.value = '';
-        
+
         showResult(resultSpan);
-        resultSpan.textContent = '';        
+        resultSpan.textContent = '';
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
-        
+
         binString.focus();
     }
 }
