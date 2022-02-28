@@ -31,4 +31,9 @@ export const
     showResult = (obj) => {
         obj.style.marginTop = '0';
         obj.style.opacity = '1';
-    };
+    },
+
+    resetResult = (obj) => {
+        obj.style.marginTop = '';
+        obj.style.opacity = '';
+    }
