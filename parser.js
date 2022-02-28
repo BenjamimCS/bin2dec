@@ -8,7 +8,7 @@ const clearResult = document.getElementById('cleanBtn');
 const resultSpan = document.getElementById('result-span');
 
 const alertBoxStndrtMargin = '-290px';
-
+    
 binString
     .addEventListener(
     'keydown',
