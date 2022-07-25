@@ -52,7 +52,7 @@ function bin2Dec(){
 }
 
 function toClear(){
-    if(resultSpan.textContent === ''){
+    if(!resultSpan.textContent){
         alertBoxTextArea.textContent = 'Nothing To Clear';
         alertBoxArea.style.marginRight = '0px';
 
