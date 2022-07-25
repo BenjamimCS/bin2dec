@@ -2,14 +2,14 @@ import {isBin,alertBoxAnim,showResult,resetResult} from './utilities.js';
 
 const alertBoxArea = document.getElementById('alertBox-area');
 const alertBoxTextArea = document.getElementById('alertBox-text');
-const binString = document.getElementById('inputBin');
+const inputBin = document.getElementById('inputBin');
 const toParseBtn = document.getElementById('toParseBtn');
 const clearResult = document.getElementById('cleanBtn');
 const resultSpan = document.getElementById('result-span');
 
 const alertBoxStndrtMargin = '-290px';
     
-binString
+inputBin
     .addEventListener(
     'keydown',
     (k) =>{              
@@ -24,21 +24,21 @@ clearResult
     .addEventListener('click',toClear);
 
 function bin2Dec(){
-    let binArr = Array.from(binString.value,(n) => Number(n));
+    let inputBinNumber = Array.from(inputBin.value,(n) => Number(n));
 
-    let expo = binArr.length;
+    let expo = inputBinNumber.length;
     let acc = 0;
 
-    if(binString.value.length === 0 || !isBin(binArr)){
+    if(inputBin.value.length === 0 || !isBin(inputBinNumber)){
         alertBoxTextArea.textContent = 'Empty or Non-Binary Value';
         alertBoxArea.style.marginRight = '0px';
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500)
 
-        binString.focus();
+        inputBin.focus();
     } else{
 
-        for (let numbers of binArr){
+        for (let numbers of inputBinNumber){
             acc += (2 ** --expo) * numbers;
         }
 
@@ -48,7 +48,7 @@ function bin2Dec(){
 
     alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
 
-    binString.focus();
+    inputBin.focus();
 }
 
 function toClear(){
@@ -58,15 +58,15 @@ function toClear(){
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
 
-        binString.focus();
+        inputBin.focus();
     } else{
-        binString.value = '';
+        inputBin.value = '';
 
         resetResult(resultSpan);
         resultSpan.textContent = '';
 
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
 
-        binString.focus();
+        inputBin.focus();
     }
 }
