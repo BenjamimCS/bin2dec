@@ -26,7 +26,7 @@ clearResult
 function bin2Dec(){
     let inputBinNumber = Array.from(inputBin.value,(n) => Number(n));
 
-    let expo = inputBinNumber.length;
+    let expo = inputBinNumber.length -1;
     let acc = 0;
 
     if(inputBin.value.length === 0 || !isBin(inputBinNumber)){
@@ -39,7 +39,7 @@ function bin2Dec(){
     } else{
 
         for (let numbers of inputBinNumber){
-            acc += (2 ** --expo) * numbers;
+            acc += (2 ** expo--) * numbers;
         }
 
         resultSpan.innerHTML = acc;
