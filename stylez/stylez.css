@@ -114,7 +114,7 @@ input{
     outline: none;
 }
 
-#binInput{
+#inputBin{
     margin-bottom: 5px;
     width: 100%;
 
@@ -127,13 +127,13 @@ input{
     /*transition: outline .1s ease;*/
 }
 
-#binInput::placeholder{
+#inputBin::placeholder{
     font-size: 0.7em;
     color: #929292;
 }
 
-#binInput::-webkit-inner-spin-button,
-#binInput::-webkit-outer-spin-button{
+#inputBin::-webkit-inner-spin-button,
+#inputBin::-webkit-outer-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
