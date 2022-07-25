@@ -9,7 +9,7 @@ export const
     alertBoxAnim = (obj,margin,value,gap = 0) => {
 
         setTimeout(() => {
-            if(typeof margin === 'number')
+            if(typeof margin === 'number') {
                 switch(margin){
                     case 1:
                         obj.style.marginTop = value;
@@ -25,6 +25,7 @@ export const
                         break;        
                 }
             
+			}
         },gap);
     },
 
