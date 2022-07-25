@@ -2,7 +2,7 @@ import {isBin,alertBoxAnim,showResult,resetResult} from './utilities.js';
 
 const alertBoxArea = document.getElementById('alertBox-area');
 const alertBoxTextArea = document.getElementById('alertBox-text');
-const binString = document.getElementById('binInput');
+const binString = document.getElementById('inputBin');
 const toParseBtn = document.getElementById('toParseBtn');
 const clearResult = document.getElementById('cleanBtn');
 const resultSpan = document.getElementById('result-span');
