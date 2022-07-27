@@ -9,19 +9,9 @@ const resultSpan = document.getElementById('result-span');
 
 const alertBoxStndrtMargin = '-290px';
     
-inputBin
-    .addEventListener(
-    'keydown',
-    (k) =>{              
-        if(k.keyCode === 13){
-            bin2Dec();
-        }
-    }
-);
-toParseBtn
-    .addEventListener('click',bin2Dec);
-clearResult
-    .addEventListener('click',toClear);
+inputBin.addEventListener('keydown', k => { if(k.keyCode === 13) bin2Dec() });
+toParseBtn.addEventListener('click',bin2Dec);
+clearResult.addEventListener('click',toClear);
 
 function bin2Dec(){
     let inputBinNumber = Array.from(inputBin.value,(n) => Number(n));
