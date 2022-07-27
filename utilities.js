@@ -2,9 +2,14 @@
 
 
 export const
-    isBin = (ar) => 
-    ar.filter((a) => 
-    a === 1 || a === 0).length === ar.length,
+    isBin = array => {
+        if(!array.length) return false
+
+        let binArr = Array.isArray(array) ? array : Array.from(array, Number);
+        let onlyBin = binArr.filter((a) => a === 1 || a === 0);
+
+        return onlyBin.length === array.length;
+    },
 
     alertBoxAnim = (obj,margin,value,gap = 0) => {
 
