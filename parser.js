@@ -33,7 +33,7 @@ function bin2Dec(){
         alertBoxTextArea.textContent = 'Empty or Non-Binary Value';
         alertBoxArea.style.marginRight = '0px';
 
-        alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500)
+        alertBoxAnim(alertBoxArea,2,"0px")
 
         inputBin.focus();
     } else{
@@ -54,8 +54,8 @@ function bin2Dec(){
 function toClear(){
     if(!resultSpan.textContent){
         alertBoxTextArea.textContent = 'Nothing To Clear';
-        alertBoxArea.style.marginRight = '0px';
 
+        alertBoxAnim(alertBoxArea,2,"0px")
         alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
 
         inputBin.focus();
@@ -65,7 +65,7 @@ function toClear(){
         resetResult(resultSpan);
         resultSpan.textContent = '';
 
-        alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin,1500);
+        alertBoxAnim(alertBoxArea,2,alertBoxStndrtMargin);
 
         inputBin.focus();
     }
